@@ -35,3 +35,4 @@ pip-delete-this-directory.txt
 
 # Secret settings
 settings_secret.py
+*.sqlite3

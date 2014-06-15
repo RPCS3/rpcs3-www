@@ -35,6 +35,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="website\home\admin.py" />
+    <Compile Include="website\home\models.py" />
+    <Compile Include="website\home\tests.py" />
+    <Compile Include="website\home\views.py" />
+    <Compile Include="website\home\__init__.py" />
     <Compile Include="website\__init__.py" />
     <Compile Include="website\settings.py" />
     <Compile Include="website\urls.py" />
@@ -54,6 +59,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="website\" />
+    <Folder Include="website\home\" />
+    <Folder Include="website\home\templates\" />
+    <Folder Include="website\static\" />
+    <Folder Include="website\static\css\" />
+    <Folder Include="website\static\js\" />
+    <Folder Include="website\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="website\home\templates\home.html" />
+    <Content Include="website\static\css\base.css" />
+    <Content Include="website\templates\base.html" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <ProjectExtensions>

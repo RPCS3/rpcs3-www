@@ -1,0 +1,41 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Always display scrollbar since the switch between small and large pages is ugly */
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-image: url('../images/background.jpg');
+    background-size: 100%;
+}
+
+    .jumbotron .container {
+        color: #EEE;
+        text-shadow: 2px 2px 3px #000;
+    }
+
+        .jumbotron .container a {
+            text-shadow: none;
+        }
+
+/* Quick links on Home */
+.bs-docs-social-buttons {
+    margin: 0px;
+    padding-top: 5px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+    .bs-docs-social-buttons li {
+        display: inline-block;
+        line-height: 1;
+        *display: inline;
+        *zoom: 1;
+    }

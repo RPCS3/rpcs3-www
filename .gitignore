@@ -33,6 +33,6 @@ pip-delete-this-directory.txt
 # Python Tools for Visual Studio
 *.suo
 
-# Secret settings
+# Secret stuff:
 settings_secret.py
 *.sqlite3

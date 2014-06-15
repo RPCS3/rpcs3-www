@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>RPCS3</h1>
+        <p>An open-source Sony PlayStation 3 emulator written in C++.</p>
+        <p>
+            <a class="btn btn-primary btn-lg" role="button" href="http://www.emunewz.net/forum/forumdisplay.php?fid=199">Download &raquo;</a>
+            <a class="btn btn-primary btn-lg" role="button" href="https://github.com/DHrpcs3/rpcs3/">Sources &raquo;</a>
+            <ul class="bs-docs-social-buttons">
+                <li><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=DHrpcs3&repo=rpcs3&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe></li>
+                <li><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=DHrpcs3&repo=rpcs3&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe></li>
+            </ul>
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <h2>Goals</h2>
+        <p>
+            <ul>
+                <li>Create an easy platform for developers to test their PS3 apps and homebrews.</li>
+                <li>Centralize a great part of the knowledge about the hardware and software of the PlayStation 3.</li>
+                <li>Play PS3 games and have fun!</li>
+            </ul>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Features</h2>
+        <p>
+            <ul>
+                <li>Cell processor interpreter.</li>
+                <li>Basic RSX emulation.</li>
+                <li>Basic SysCalls implemented for HLE.</li>
+                <li>Loading simple homebrews.</li>
+            </ul>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Examples</h2>
+        <img src="{% static 'images/gallery1.jpg' %}" class="img-thumbnail" alt="Disgaea 3: Absence of Justice" width="150">&nbsp;
+        <img src="{% static 'images/gallery2.jpg' %}" class="img-thumbnail" alt="Arkedo Series: 02 Swap" width="130">
+    </div>
+</div>
+{% endblock %}

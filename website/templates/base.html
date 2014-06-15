@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RPCS3 {% block title %}{% endblock %}</title>
+
+    <!-- Stylesheets -->
+    <link href="{% static 'css/external/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=".">RPCS3</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href='http://www.emunewz.net/forum/forumdisplay.php?fid=199'>Downloads</a></li>
+                    <li><a href='compatibility.php'>Compatibility</a></li>
+                    <li><a href='https://github.com/DHrpcs3/rpcs3/wiki/FAQ'>FAQ</a></li>
+                    <li><a href='http://rpcs3.net/'>Blog</a></li>
+                    <li><a href='http://www.emunewz.net/forum/forumdisplay.php?fid=162'>Forum</a></li>
+                    <li><a href='contact.php'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% block jumbotron %}
+    {% endblock %}
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+
+        <hr>
+
+        <footer>
+            <p>&copy; RPCS3 project, 2014</p>
+        </footer>
+    </div>
+
+    <!-- Javascripts -->
+    <script src="{% static 'js/external/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block intro %}
+{% include 'classify.html' %}
+{% endblock %}
+
+{% block content %}
+<div class='row'>
+	<h1>Compatibility</h1>
+	<div class='col-md-4'>
+		<h3>Stats</h3>
+        <dl>
+            <dt>Perfect: {{ strResults.0 }} %</dt>
+            <dd>
+                <div class='progress'>
+                    <div class='progress-bar' role='progressbar' aria-valuenow='{{ intResults.0 }}' aria-valuemin='0' aria-valuemax='100' style='width: {{ strResults.0 }}%'>
+                    </div>
+                </div>
+            </dd>
+
+            <dt>Playable: {{ strResults.1 }} %</dt>
+            <dd>
+                <div class='progress'>
+                    <div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='{{ intResults.1 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.1 }}%;'>
+                    </div>
+                </div>
+            </dd>
+
+            <dt>Ingame: {{ strResults.2 }} %</dt>
+            <dd>
+                <div class='progress'>
+                    <div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='{{ intResults.2 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.2 }}%;'>
+                    </div>
+                </div>
+            </dd>
+
+            <dt>Intro: {{ strResults.3 }} %</dt>
+            <dd>
+                <div class='progress'>
+                    <div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='{{ intResults.3 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.3 }}%;'>
+                    </div>
+                </div>
+            </dd>
+
+            <dt>Nothing: {{ strResults.4 }} %</dt>
+            <dd>
+                <div class='progress'>
+                    <div class='progress-bar' role='progressbar' aria-valuenow='{{ intResults.4 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.4 }}%; background-color: #555'>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+	</div>
+
+    <div class='col-md-8'>
+        <h3>Information</h3>
+        <p>
+            Almost every commercial game will not run, because RPCS3 it's in an early stage of development. A lot of features required to run commercial games still have not been implemented. Commercial games will be supported when the hardware emulation is accurate enough to run them.
+            <ul>
+                <li><p><b>Perfect</b>: No issues at all.</p></li>
+                <li><p><b>Playable</b>: Runs well from beginning to end, only with minor audio or video glitches.</p></li>
+                <li><p><b>Ingame</b>: Starts, it can be played, but with crashes or major graphical/audio glitches.</p></li>
+                <li><p><b>Intro</b>: Hangs/crashes somewhere between booting and starting.</p></li>
+                <li><p><b>Nothing</b>: Crashes/exits before anything is displayed.</p></li>
+            </ul>
+        </p>
+    </div>
+</div>
+{% endblock %}

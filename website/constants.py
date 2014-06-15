@@ -1,0 +1,17 @@
+# Contants shared between all apps
+
+class C:
+    COMPATIBILITY_UNKNOWN = 0
+    COMPATIBILITY_NOTHING = 1
+    COMPATIBILITY_INTRO = 2
+    COMPATIBILITY_INGAME = 3
+    COMPATIBILITY_PLAYABLE = 4
+    COMPATIBILITY_PERFECT = 5
+    COMPATIBILITY = (
+        (COMPATIBILITY_UNKNOWN, "Unknown"),
+        (COMPATIBILITY_NOTHING, "Nothing"),
+        (COMPATIBILITY_INTRO, "Intro"),
+        (COMPATIBILITY_INGAME, "Ingame"),
+        (COMPATIBILITY_PLAYABLE, "Playable"),
+        (COMPATIBILITY_PERFECT, "Perfect"),
+    )

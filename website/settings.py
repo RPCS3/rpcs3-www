@@ -117,6 +117,7 @@ INSTALLED_APPS = (
 
     # Internal
     'website.home',
+    'website.compat',
 )
 
 # A sample logging configuration. The only tangible logging

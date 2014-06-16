@@ -39,3 +39,4 @@ sqlite3.exe
 # Irrelevant files
 settings_secret.py
 db.sqlite3
+compatibility.csv

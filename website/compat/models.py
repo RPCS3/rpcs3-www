@@ -5,7 +5,7 @@ from website.constants import *
 class Game(models.Model):
     # Static
     titleid = models.CharField(max_length=9, primary_key=True)
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=128)
     publisher = models.CharField(max_length=64)
     developer = models.CharField(max_length=64)
     genre = models.CharField(max_length=32)

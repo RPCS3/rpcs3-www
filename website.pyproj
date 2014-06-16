@@ -43,6 +43,9 @@
     <Compile Include="website\blog\views.py" />
     <Compile Include="website\blog\__init__.py" />
     <Compile Include="website\compat\admin.py" />
+    <Compile Include="website\compat\management\commands\reinitdb-compat.py" />
+    <Compile Include="website\compat\management\commands\__init__.py" />
+    <Compile Include="website\compat\management\__init__.py" />
     <Compile Include="website\compat\models.py" />
     <Compile Include="website\compat\tests.py" />
     <Compile Include="website\compat\urls.py" />
@@ -76,6 +79,8 @@
     <Folder Include="website\blog\" />
     <Folder Include="website\blog\templates\" />
     <Folder Include="website\compat\" />
+    <Folder Include="website\compat\management\" />
+    <Folder Include="website\compat\management\commands\" />
     <Folder Include="website\compat\templates\" />
     <Folder Include="website\home\" />
     <Folder Include="website\home\templates\" />

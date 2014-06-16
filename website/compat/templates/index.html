@@ -10,45 +10,15 @@
 	<div class='col-md-4'>
 		<h3>Stats</h3>
         <dl>
-            <dt>Perfect: {{ strResults.0 }} %</dt>
+			{% for result in results %}
+            <dt>{{ result.category }}: {{ result.string }} %</dt>
             <dd>
                 <div class='progress'>
-                    <div class='progress-bar' role='progressbar' aria-valuenow='{{ intResults.0 }}' aria-valuemin='0' aria-valuemax='100' style='width: {{ strResults.0 }}%'>
+                    <div class='progress-bar' role='progressbar' aria-valuenow='{{ result.int }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ result.string }}%; background-color:{{ result.color }}'>
                     </div>
                 </div>
             </dd>
-
-            <dt>Playable: {{ strResults.1 }} %</dt>
-            <dd>
-                <div class='progress'>
-                    <div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='{{ intResults.1 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.1 }}%;'>
-                    </div>
-                </div>
-            </dd>
-
-            <dt>Ingame: {{ strResults.2 }} %</dt>
-            <dd>
-                <div class='progress'>
-                    <div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='{{ intResults.2 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.2 }}%;'>
-                    </div>
-                </div>
-            </dd>
-
-            <dt>Intro: {{ strResults.3 }} %</dt>
-            <dd>
-                <div class='progress'>
-                    <div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='{{ intResults.3 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.3 }}%;'>
-                    </div>
-                </div>
-            </dd>
-
-            <dt>Nothing: {{ strResults.4 }} %</dt>
-            <dd>
-                <div class='progress'>
-                    <div class='progress-bar' role='progressbar' aria-valuenow='{{ intResults.4 }}' aria-valuemin='0' aria-valuemax='100' style='width:{{ strResults.4 }}%; background-color: #555'>
-                    </div>
-                </div>
-            </dd>
+			{% endfor %}
         </dl>
 	</div>
 

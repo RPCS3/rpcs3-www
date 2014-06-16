@@ -14,12 +14,19 @@ def compat_index(request):
         len(Game.objects.filter(compatibility=C.COMPATIBILITY_PERFECT)),
     ]
     total = sum(stats)
-    strResults = map(lambda x: '%.2f' % (100.0*x/total if total else 0), stats)
-    intResults = map(lambda x: 100*x/total if total else 0, stats)
+
+    # TODO: Rewrite this with more Django style
+    results = []
+    for i in range(len(stats))[::-1]:
+        results.append({
+            'category' : C.COMPATIBILITY[i+1][1],                                 # e.g. 'Playable'
+            'string' : '%.2f' % (100.0 * stats[i] / total if total else 0),       # e.g. '12.34'
+            'int' : 100 * stats[i] / total if total else 0,                       # e.g.  12
+            'color' : ['#555555', '#D9534F', '#F0AD4E', '#5CB85C', '#428BCA'][i], # e.g. '#5CB85C'
+        })
 
     objects = {
-        'strResults' : strResults,
-        'intResults' : intResults,
+        'results' : results,
         'chars' : '#ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     }
     return render(request, 'index.html', objects)

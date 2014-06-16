@@ -1,4 +1,7 @@
 from django.contrib import admin
-from website.compat.models import Title
+from website.compat.models import Game
 
-admin.site.register(Title)
+class GameAdmin(admin.ModelAdmin):
+    list_display = ('titleid', 'name', 'compatibility')
+
+admin.site.register(Game, GameAdmin)

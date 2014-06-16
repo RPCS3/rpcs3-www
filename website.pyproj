@@ -5,8 +5,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>website</Name>
     <RootNamespace>website</RootNamespace>
-    <CommandLineArguments>
-    </CommandLineArguments>
+    <CommandLineArguments>runserver</CommandLineArguments>
     <InterpreterPath />
     <InterpreterArguments />
     <DjangoSettingsModule>$(MSBuildProjectName).settings</DjangoSettingsModule>
@@ -24,7 +23,7 @@
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <LaunchProvider>Django launcher</LaunchProvider>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -81,6 +80,7 @@
     <Content Include="website\compat\templates\classify.html" />
     <Content Include="website\compat\templates\list.html" />
     <Content Include="website\compat\templates\index.html" />
+    <Content Include="website\compat\templates\title.html" />
     <Content Include="website\home\templates\home.html" />
     <Content Include="website\static\css\base.css" />
     <Content Include="website\templates\base.html" />

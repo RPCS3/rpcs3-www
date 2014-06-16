@@ -2,7 +2,7 @@ from django.db import models
 
 from website.constants import *
 
-class Title(models.Model):
+class Game(models.Model):
     # Static
     titleid = models.CharField(max_length=9)
     name = models.CharField(max_length=64)
@@ -14,3 +14,22 @@ class Title(models.Model):
 
     # Dynamic
     compatibility = models.SmallIntegerField(choices=C.COMPATIBILITY)
+
+    # Methods
+    def __unicode__(self):
+        return self.name
+
+    def get_region(self):
+        if len(self.titleid):
+            return 'Unknown!'
+
+        # Regions
+        if self.titleid[2] == 'A': return 'Asia'
+        if self.titleid[2] == 'E': return 'Europe'
+        if self.titleid[2] == 'H': return 'Southeast Asia'
+        if self.titleid[2] == 'K': return 'Hong Kong'
+        if self.titleid[2] == 'I': return 'Internal (Sony)'
+        if self.titleid[2] == 'J': return 'Japan'
+        if self.titleid[2] == 'U': return 'USA'
+        if self.titleid[2] == 'X': return 'Firmware/SDK Sample'
+        return 'Unknown!'

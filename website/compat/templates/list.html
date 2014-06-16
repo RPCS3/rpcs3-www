@@ -5,4 +5,30 @@
 {% endblock %}
 
 {% block content %}
+<table class='table table-striped'>
+    <thead>
+        <tr>
+            <th width='10%'>ID</th>
+            <th width='30%'>Title</th>
+            <th width='15%'>Publisher</th>
+            <th width='15%'>Developer</th>
+            <th width='10%'>Genre</th>
+            <th width='10%'>Release&nbsp;Date</th>
+            <th width='10%'>Compatibility</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for game in gameList %}
+        <tr>
+            <td><a href='/compat/{{ game.titleid }}/'>{{ game.titleid }}</a></td>
+            <td><a href='/compat/{{ game.titleid }}/'>{{ game.name }}</a></td>
+            <td>{{ game.publisher }}</td>
+            <td>{{ game.developer }}</td>
+            <td>{{ game.genre }}</td>
+            <td>{{ game.release }}</td>
+            <td>{{ game.get_compatibility_display }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}

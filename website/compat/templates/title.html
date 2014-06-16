@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{ game.name }}</h1>
+<div class="row">
+
+    <div class='col-md-4' style='width:300px!important'>
+        <h3>Cover</h3>
+		<img src='{% static '../images/covers/{{ game.titleid }}.jpg'/>
+    </div>
+
+    <div class='col-md-4'>
+	    <h3>Information</h3>
+		<table class='table table-bordered table-striped'>
+		    <tr><td width='110'><b>ID</b></td><td>{{ game.titleid }}</td></tr>
+            <tr><td width='110'><b>Region</b></td><td>{{ game.get_region }}</td></tr>
+		    <tr><td width='110'><b>Publisher</b></td><td>{{ game.publisher }}</td></tr>
+		    <tr><td width='110'><b>Developer</b></td><td>{{ game.developer }}</td></tr>
+		    <tr><td width='110'><b>Genre</b></td><td>{{ game.genre }}</td></tr>
+		    <tr><td width='110'><b>Release</b></td><td>{{ game.release }}</td></tr>
+		    <tr><td width='110'><b>Firmware</b></td><td>{{ game.firmware }}</td></tr>
+		</table>
+    </div>
+		  
+	<div class='col-md-4'>
+	    <h3>Status</h3>
+		<table class='table table-bordered table-striped'>
+		    <tr><td width='110'><b>Compatibility</b></td><td>{{ game.get_compatibility_display }}</td></tr>
+		    <tr><td width='110'><b>Version</b></td><td><!-- TODO --></td></tr>
+	    </table>
+		  
+		<h3>Notes</h3>
+		<!-- TODO -->
+    </div>
+</div>
+{% endblock %}

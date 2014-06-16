@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="website\blog\admin.py" />
     <Compile Include="website\blog\models.py" />
     <Compile Include="website\blog\tests.py" />
     <Compile Include="website\blog\urls.py" />
@@ -84,7 +85,8 @@
     <Folder Include="website\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="website\blog\templates\index.html" />
+    <Content Include="website\blog\templates\blog_article.html" />
+    <Content Include="website\blog\templates\blog_index.html" />
     <Content Include="website\compat\templates\classify.html" />
     <Content Include="website\compat\templates\list.html" />
     <Content Include="website\compat\templates\index.html" />

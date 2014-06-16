@@ -5,8 +5,9 @@ apt-get install python
 apt-get install python-dev
 apt-get install python-pip
 
-# Django
+# Modules
 pip install django
+pip install markdown
 
 # Initialize DB
 python ../manage.py syncdb

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for entry in articles %}
+<div>
+    <div>
+        <h2>
+            <a href="/blog/{{ entry.get_url }}" title="{{ entry.title }}" rel="bookmark">
+				{{ entry.title }}
+			</a>
+		</h2>
+        <p>
+            Written by
+            <span><a href="#" rel="author">RPCS3 Staff</a></span>
+            on
+            <abbr class="published" title="{{ entry.date|date:"c" }}">{{ entry.date|date:"F j, Y" }}</abbr>
+            /
+			{% for tag in entry.tags.all %}
+            <span class="label label-default">{{ tag.tag }}</span>
+			{% endfor %}
+			/
+            <a href="/blog/{{ entry.id }}/" title="Short URL to {{ entry.title }}" rel="shortlink">Short link</a>
+        </p>
+    </div>
+    <div>
+        {{ entry.get_formatted_content|safe }}
+    </div>
+    <br />
+</div>
+{% endfor %}
+
+<div class="text-center">
+    <ul class="pagination">
+		{% for num in pages %}
+        <li><a href='/blog/page/{{ num }}/'>{{ num }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

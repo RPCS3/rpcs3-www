@@ -30,9 +30,12 @@ pip-delete-this-directory.txt
 *.log
 *.pot
 
+# SQLite3
+sqlite3.exe
+
 # Python Tools for Visual Studio
 *.suo
 
-# Secret stuff:
+# Irrelevant files
 settings_secret.py
-*.sqlite3
+db.sqlite3
